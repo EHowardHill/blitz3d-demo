@@ -2,12 +2,12 @@
 ; Some common constants you might want to use
 Include "consts.bb"
 
-Graphics3D 800,600,32,SCREEN_WINDOWED
+Graphics3D 800,600,32,0
 SetBuffer BackBuffer()
 
 ; Environment setup
 camera = CreateCamera()
-PositionEntity camera,0,5,10
+PositionEntity camera,0,5,0
 light = CreateLight()
 
 plane=CreatePlane()
@@ -22,7 +22,7 @@ cubZ#=0
 PositionEntity cube,cubX#,cubY#,cubZ#
 
 ; Game loop
-While Not 1=2 ;KeyDown(KEY_ESC)
+While Not KeyDown(KEY_ESC)
 
 	; Vertical
 	If KeyDown(UP_A)=True Then

@@ -2,7 +2,7 @@
 ; Some common constants you might want to use
 Include "consts.bb"
 
-Graphics3D 800,600,32,SCREEN_WINDOWED
+Graphics3D 800,600,32,1
 SetBuffer BackBuffer()
 
 ; Environment setup
@@ -11,7 +11,7 @@ PositionEntity camera,0,5,0
 light = CreateLight()
 
 plane=CreatePlane()
-grass_tex=LoadTexture("grass.jpg")
+grass_tex=LoadTexture("grass.bmp")
 EntityTexture plane,grass_tex
 
 ; Main "character"
@@ -22,7 +22,7 @@ cubZ#=0
 PositionEntity cube,cubX#,cubY#,cubZ#
 
 ; Game loop
-While Not 1=2 ;KeyDown(KEY_ESC)
+While Not KeyDown(KEY_ESC)
 
 	; Vertical
 	If KeyDown(UP_A)=True Then
