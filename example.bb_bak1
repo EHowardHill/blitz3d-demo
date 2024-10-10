@@ -9,7 +9,7 @@ SetBuffer BackBuffer()
 light = CreateLight()
 
 plane=CreatePlane()
-grass_tex=LoadTexture("grass.jpg")
+grass_tex=LoadTexture("grass.bmp")
 EntityTexture plane,grass_tex
 
 Type Camera
